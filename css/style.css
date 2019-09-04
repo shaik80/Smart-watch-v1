@@ -18,10 +18,31 @@
 .task-heading{
     font-family: sans-serif;
 }
-.canvas{
-    margin-top: 10em;
-    width: 30em;
-    height: 30em;
-    border-style: solid;
-    border-color: #1394f6;
+/* .watch-belts-1{
+    margin-left: 3.8em;
+    width: 219px;
+    height: 43px;
+    background: #C4C4C4;
 }
+.watch-belts-2{
+    margin-left: 3.8em;
+    width: 219px;
+    height: 75px;
+    background: #222831;
+}
+.watch-frame{
+    margin-left: 2em;
+    width: 277px;
+    height: 300px;    
+    background: #393E46;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 36px;
+}
+.watch-frame .watch-screen{
+    margin-left: 1em;
+    width: 237px;
+    height: 267px;
+    background: url(me.jpg), #FFFFFF;
+    border-radius: 36px;
+
+} */
