@@ -2,12 +2,26 @@
     --color-blue:#1394f6;
     --color-white:#fafafa;
 }
-
 .description{
     background-color:var(--color-blue);
     height: 100vh;
+    padding: 10em;
 }
-.main{
+.main-container{
     background-color:var(--color-white);
     height: 100vh;
+}
+.paragraph .text-white{
+    
+    font-size: 0.66em;
+}
+.task-heading{
+    font-family: sans-serif;
+}
+.canvas{
+    margin-top: 10em;
+    width: 30em;
+    height: 30em;
+    border-style: solid;
+    border-color: #1394f6;
 }
