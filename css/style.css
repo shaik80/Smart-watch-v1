@@ -1,0 +1,13 @@
+:root{
+    --color-blue:#1394f6;
+    --color-white:#fafafa;
+}
+
+.description{
+    background-color:var(--color-blue);
+    height: 100vh;
+}
+.main{
+    background-color:var(--color-white);
+    height: 100vh;
+}
