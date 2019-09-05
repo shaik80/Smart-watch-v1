@@ -46,3 +46,9 @@
     border-radius: 36px;
 
 } */
+.watch{
+    margin-left: 1em;
+}
+.circle-icon:hover{
+    fill: #00adb5;
+}
