@@ -38,13 +38,22 @@
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 36px;
 }
-.watch-frame .watch-screen{
-    margin-left: 1em;
+.watch-screen{
+    position: absolute;
+    margin-top: 1em;
+    margin-left: 1.2em;
     width: 237px;
     height: 267px;
-    background: url(me.jpg), #FFFFFF;
+    background: url(../img/me.jpg), #FFFFFF;
     border-radius: 36px;
+}
+.round-icon{
 
+width: 32px;
+height: 31px;
+background: #393E46;
+border-radius: 50%;
+display: inline-block;
 }
 /* .watch{
     margin-left: 1em;
