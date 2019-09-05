@@ -18,7 +18,7 @@
 .task-heading{
     font-family: sans-serif;
 }
-/* .watch-belts-1{
+.watch-belts-1{
     margin-left: 3.8em;
     width: 219px;
     height: 43px;
@@ -45,10 +45,10 @@
     background: url(me.jpg), #FFFFFF;
     border-radius: 36px;
 
-} */
-.watch{
+}
+/* .watch{
     margin-left: 1em;
 }
 .circle-icon:hover{
     fill: #00adb5;
-}
+} */
