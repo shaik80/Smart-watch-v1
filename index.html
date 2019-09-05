@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Custom css -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- fontawesome  -->
+    <script src="https://kit.fontawesome.com/9260abf4d0.js"></script>
+
     <title>Smart Watch</title>
   </head>
   <body>
@@ -51,17 +54,46 @@
           <!-- start of main-container -->
             <div class="col-sm-6 main-container">
                   <div class="mt-5">
-                    <div class="watch-belts-1"></div>
-                    <div class="watch-belts-2"></div>
+                    
+                    <div class="watch-belts-start"></div>
+                    <div class="shape-left"></div>
+                    <div class="shape-left shape-right"></div>
+                    <div class="watch-belts-2">  
+                    </div>
+                    
                     <div class="watch-frame">
-                      <div class="watch-screen">
-                        <div class="round-icon"></div>
-                        <div class="round-icon"></div>
-                        <div class="round-icon"></div>
+                      <div class="watch-screen row" id="screen">
+                          <div class="time d-flex align-items-end"><span class="day">Monday</span><br><h1>8:00 <br></h1></div>
+                          
+                        <div class="row">
+                          
+                        <div class="col-4 d-flex align-items-end">
+                            <div class="round-icon">
+                              <i class="far fa-comments"></i>
+                            </div>
+                          </div>
+                          <div class="col-4 d-flex align-items-end">
+                            <div class="round-icon">
+                              <i class="fas fa-music"></i>
+                            </div>
+                          </div>
+                          <div class="col-4 d-flex align-items-end">
+                                
+                            <div class="round-icon">
+                              <i class="far fa-clock"></i>
+                            </div>
+                          </div>
+                        </div>
+                          <div class="display-border"></div>
+
                       </div>
                     </div>
+                    <div class="shape-left"></div>
+                    <div class="shape-left shape-right"></div>
+
                     <div class="watch-belts-2"></div>
-                    <div class="watch-belts-1"></div>
+                    
+                    <div class="watch-belts-start watch-belts-end"></div>
                   </div>
               </div>
           <!-- end of container -->
@@ -70,8 +102,6 @@
 </div>
 <!-- end of main -->
 
-
-    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
