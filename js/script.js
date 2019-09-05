@@ -1,3 +1,3 @@
-function call(){
-    alert("hello");
-}
+// function call(){
+//     alert("hello");
+// }

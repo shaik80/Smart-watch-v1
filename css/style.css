@@ -48,7 +48,6 @@
     border-radius: 36px;
 }
 .round-icon{
-
 width: 32px;
 height: 31px;
 background: #393E46;
@@ -59,5 +58,5 @@ display: inline-block;
     margin-left: 1em;
 }
 .circle-icon:hover{
-    fill: #00adb5;
-} */
+    fill: #00adb5; */
+}
