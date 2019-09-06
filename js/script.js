@@ -1,7 +1,7 @@
 $(function(){
     $( ".display-border" ).hide();
     // $( ".message-notification" ).hide();
-    $( ".homescreen" ).hide();
+    // $( ".homescreen" ).hide();
     $( ".round-icon" ).click(function() {
         $( ".display-border" ).show();
         $(".homescreen").hide();

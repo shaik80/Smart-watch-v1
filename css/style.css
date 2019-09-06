@@ -117,15 +117,20 @@ border-radius: 36px;
     font-size: 4.7em;
 }
 .day{
-    margin-bottom: -9px;
+    margin-left: 1em;
+    margin-bottom: -16px;
     font-size: 1.5em;
     color: var(--color-primary);
 }
-.message-notification{
-    margin-top: 2em;
-}
-.message-notification .carousel{
-    
+
+.round-icon:hover{
+    transition: 10ms;
+    transition-timing-function: linear;    
+    width: 37px;
+    height: 36px;
+    background-color: var(--color-secondary);   
+    border-radius: 50%;
+
 }
 /* .watch{
     margin-left: 1em;
