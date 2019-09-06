@@ -55,6 +55,13 @@
     background-size: 100%;
     border-radius: 36px;
 }
+.watch-screenlock{
+    position: absolute;
+    width: 237px;    height: 267px;
+    background-color:#24272b;
+    background-size: 100%;
+    border-radius: 36px;
+}
 .watch-screen-copy{
     position: absolute;
     margin-left: 0em;
@@ -124,8 +131,7 @@ border-radius: 36px;
 }
 
 .round-icon:hover{
-    transition: 10ms;
-    transition-timing-function: linear;    
+    transition: 0.8s;
     width: 37px;
     height: 36px;
     background-color: var(--color-secondary);   
@@ -135,7 +141,10 @@ border-radius: 36px;
 #timer .timer-countdown{
     color: var(--color-primary)
 }
-
+.fa-lock{
+    color: var(--color-primary);
+    font-size: 9em;
+}
 /* .watch{
     margin-left: 1em;
 }

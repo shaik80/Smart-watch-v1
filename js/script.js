@@ -1,5 +1,5 @@
 $(function(){
-    // $( ".display-border" ).hide();
+    $( ".display-border" ).hide();
     // $( ".message-notification" ).hide();
     $( ".homescreen" ).hide();
     $( ".round-icon" ).click(function() {
@@ -7,7 +7,12 @@ $(function(){
         $(".homescreen").hide();
         $( ".watch-screen" ).css({'background-color':'#222831'});
 
-    })
+    });
+
+    $( ".watch-screenlock" ).click(function() {
+      $(".watch-screenlock").fadeOut();
+    });
+
 
     // $(".timer-countdown-value").keypress(function(){
     //     $this = $(this);
