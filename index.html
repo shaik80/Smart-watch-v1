@@ -66,18 +66,18 @@
                         
                          <div class="watch-screen-copy row">
                              <div class="col-4 d-flex align-items-end">
-                                 <div class="round-icon comments">
+                                 <div class="round-icon comments-icon">
                                    <i class="far fa-comments"></i>
                                  </div>
                                </div>
                                <div class="col-4 d-flex align-items-end">
-                                 <div class="round-icon music">
+                                 <div class="round-icon music-icon">
                                    <i class="fas fa-music"></i>
                                  </div>
                                </div>
                                <div class="col-4 d-flex align-items-end">
                                      
-                                 <div class="round-icon clock">
+                                 <div class="round-icon clock-icon">
                                    <i class="far fa-clock"></i>
                                  </div>
                                </div> 
@@ -90,12 +90,63 @@
                             <i class="fas fa-lock"></i>
                           </div>
                          
-                         <div class="display-border">
-                           <iframe src="https://gaana.com" height="100%" width="230px;">
+                         <div class="display-border music">
+                            <iframe src=" https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="237px"
+                            height="222px" frameborder="1" allowtransparency="true" allow="encrypted-media"></iframe>
+                            
+                          </div>
 
-                           </iframe>
-                         </div>
+                          <div class="display-border timer">
+                            <div id="timer">
+                                  <div class="row">
+                                    <div class="col-12 text-center">
+                                      <h1 class="timer-countdown" id="timer-countdown">
+                                        <span id="hour">00</span>:<span id="minute">00</span>:<span id="seconds">00</span>
+                                      </h1>
+                                      <div class="watch--copy row">
+                                          <div class="col-4 d-flex align-items-center">
+                                              
+                                                <i class="far fa-play-circle" id="start-btn"></i>
+                                              
+                                            </div>
+                                            <div class="col-4 d-flex align-items-center">
+                                              
+                                                <i class="fas fa-retweet" id="reset-btn"></i>
+                                              
+                                            </div>
+                                            <div class="col-4 d-flex align-items-center">
+                                                  
+                                                  <i class="far fa-stop-circle" id="stop-btn"></i>
+                                              
+                                            </div> 
+                                        </div> 
+             
+                                    </div>
+                                    <div>
+                                    </div>
+                                  </div>
+                                </div>
 
+                            </div>
+                          <div class="display-border message">
+                            <div class="header text-center">
+                                <span class="contact-name">Shaik Mudassir</span><br>
+                                <span class="contact-number">8050681782</span>
+                            </div>
+                            <div class="sender text-center">
+                              <span class="">Hello bro...</span>
+                            </div>
+                            <div class="receiver text-center">
+                                <span class="text-center">Hello bro...</span>
+                              </div>
+                            <div class="footer">
+                                <input type="text" class="footer-input text-center" placeholder="Type message.............">
+                                <span><button class="footer-button text-left"><i class="far fa-paper-plane"></i></button></span>
+                                
+                              </div>
+  
+                          </div>
+  
                      </div>
                    </div>
                    <div class="shape-left"></div>
@@ -111,8 +162,7 @@
    </div>
 </div>
 <!-- end of main -->
-
-   <!-- Optional JavaScript -->
+<!-- display-border   <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
@@ -123,13 +173,4 @@
 </html>
 
 
-<!-- <div id="timer">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h1 class="timer-countdown" id="timer-countdown">00:00:00</h1>
-        <input type="text" class="timer-countdown-value text-center" placeholder="Type here....">
-      </div>
-      <div>
-      </div>
-    </div>
-  </div> -->
+

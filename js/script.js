@@ -1,18 +1,28 @@
 $(function(){
-    $( ".display-border" ).hide();
+    $(".timer").toggle();
+    $(".message").toggle();
+
+    $(".music").toggle();
     // $( ".message-notification" ).hide();
-    $( ".homescreen" ).hide();
-    $( ".round-icon" ).click(function() {
-        $( ".display-border" ).show();
-        $(".homescreen").hide();
-        $( ".watch-screen" ).css({'background-color':'#222831'});
+    
+    $( ".music-icon" ).click(function() {
+        $(".music").toggle();
+        $(".watch-screen" ).css({'background-color':'#222831'});
 
     });
+    $( ".clock-icon" ).click(function() {
+        $(".timer").toggle();
+        $(".watch-screen" ).css({'background-color':'#222831'});
 
+    });
     $( ".watch-screenlock" ).click(function() {
       $(".watch-screenlock").fadeOut();
     });
+    $( ".comments-icon" ).click(function() {
+        $(".message").toggle();
+        $(".watch-screen" ).css({'background-color':'#222831'});
 
+    });
 
     // $(".timer-countdown-value").keypress(function(){
     //     $this = $(this);
@@ -37,8 +47,7 @@ $(function(){
     //     // Allow only backspace and delete
     //     // Ensure that it is a number and stop the keypress
     //         if (event.keyCode == 58 || 
-    //             event.keyCode == 8 || 
-    //             event.keyCode == 127 || 
+    //             event.keyCode == 8 ||     //             event.keyCode == 127 || 
     //             event.keyCode < 48 || 
     //             event.keyCode > 57 || 
     //             event.keyCode > 57) {
@@ -82,5 +91,34 @@ $(function(){
     //     // setInterval( countdown - 1, 100);
     //     console.log(countdown); 
     //  });
+    let hour = 0;
+    let minute = 0;
+    let seconds = 0;
+    let totalSeconds = 0;
+    let intervalId = 0;
+    function startTimer() {
+      ++totalSeconds;
+      hour = Math.floor(totalSeconds /3600);
+      minute = Math.floor((totalSeconds - hour*3600)/60);
+      seconds = totalSeconds - (hour*3600 + minute*60);
+      $("#hour").html(hour);
+      $("#minute").html(minute);
+      $("#seconds").html(seconds);
+    }
+    $("#start-btn").on('click', () => {
+      intervalId = setInterval(startTimer, 1000);
+    });
+    $("#stop-btn").on('click', () => {
+        if(intervalId != 0){
+            clearInterval(intervalId);
+        }
+    });
+    $("#reset-btn").on('click', () => {
+       totalSeconds = 0;
+       $("#hour").html("0");
+       $("#minute").html("0");
+       $("#seconds").html("0");
+        });
+
 
 })
