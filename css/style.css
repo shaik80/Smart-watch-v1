@@ -1,12 +1,14 @@
 :root{
     --color-blue:#1394f6;
     --color-white:#fafafa;
-    --color-primary:#00ADB5;
-    --color-main:#222831;
+    --color-primary:#12e6c8;
+    --color-secondary:#a287f4;
+    --color-base-1:#414141;
+    --color-base-2:#000000;
 }
 .description{
     background-color:var(--color-blue);
-    eight: 100vh;
+    height: 100vh;
     padding: 7em;
 }
 .main-container{
