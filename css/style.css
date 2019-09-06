@@ -132,6 +132,10 @@ border-radius: 36px;
     border-radius: 50%;
 
 }
+#timer .timer-countdown{
+    color: var(--color-primary)
+}
+
 /* .watch{
     margin-left: 1em;
 }
