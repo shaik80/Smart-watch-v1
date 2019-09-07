@@ -10,3 +10,5 @@ Hello,Alien
 5. [Bootsrap's](https://getbootstrap.com/docs/4.3/getting-started/introduction/ "Bootsrap's!")
 
 #### picture
+
+![screen shoot](https://github.com/shaik80/Smart-watch-v1/blob/master/img/screen-shoot.jpg)
