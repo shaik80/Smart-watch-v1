@@ -66,12 +66,6 @@ $(function(){
   }  
 
 
-
-
-
-
-
-
 //timer
 function startTimer() {
   ++totalSeconds;
