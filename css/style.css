@@ -1,3 +1,13 @@
+
+    /* Project Name: Weather app 
+    Description: This application is base on smart watch we have try to put some of the feature's
+    of smart watch
+    language: HTMl,CSS,JS,bootsrap(framework)
+    Author: Shaik Mudassir
+    Github: https://github.com/shaik80 */
+
+
+
 :root{
     --color-base-1:#C4C4C4;
     --color-base-2:#222831;
@@ -11,7 +21,7 @@
 .main .description{
     background-color:var(--color-blue);
     height: 100vh;
-    padding: 7em;
+    padding: 5em;
 }
 .paragraph .text-white{
     font-size: 0.66em;
@@ -208,17 +218,17 @@ iframe{
     width: 190px;
     height: 51px;
 
-    background: var(--color-base-1);;
+    background: var(--color-white);
     border-radius: 36px 0px 0px 36px;
 }
 .footer-button{
-    background: var(--color-base-1);;
+    background: var(--color-white);;
     height: 51px;
     width: 44px;
     margin-left: -6px;
     border-radius: 0px 24px 24px 0px;
 }
-.fa-paper-plane{
+.fa-paper-plane{F
     color: var(--color-base-2)
 }
 .notification-message{

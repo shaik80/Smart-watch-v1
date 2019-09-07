@@ -1,3 +1,10 @@
+    // Project Name: Weather app 
+    // Description: This application is base on smart watch we have try to put some of the feature's
+    // of smart watch
+    // language: HTMl,CSS,JS,bootsrap(framework)
+    // Author: Shaik Mudassir
+    // Github: https://github.com/shaik80
+
 $(function(){
   $(".timer").toggle();
   $(".message").toggle();
@@ -26,11 +33,16 @@ $(function(){
       phoneno:"0987654321"
     }
       ];
-      let hour = 0;
-      let minute = 0;
-      let seconds = 0;
-      let totalSeconds = 0;
-      let intervalId = 0;
+    
+    $("#list1").html(messages[0].shotmessage);
+    $("#list2").html(messages[1].shotmessage);
+    $("#list3").html(messages[2].shotmessage);
+      
+    let hour = 0;
+    let minute = 0;
+    let seconds = 0;
+    let totalSeconds = 0;
+    let intervalId = 0;
       
   setInterval(show_time, 1000);
 
@@ -53,47 +65,8 @@ $(function(){
     $("#day").text(dayword[now.getDay()]);
   }  
 
-    $("#list1").html(messages[0].shotmessage);
-    $("#list2").html(messages[1].shotmessage);
-    $("#list3").html(messages[2].shotmessage);
-    let info = messages
-    .filter(v => v.shotmessage === ($(".notification-message").html()))
-    .map( v =>{
-      $("#name").html(v.sendername),
-      $("#phone-no").html(v.phoneno),
-      $("#sender").html(v.sendermessage),
-      $("#reciver").html(v.recivermessage)
-      });
 
 
-$("#list1").on("click", function() {
-  $(".message-notification").hide();
-  $(".message").show();
-  $("#name").html(messages[0].sendername);
-  $("#phone-no").html(messages[0].phoneno);
-  $("#sender").html(messages[0].sendermessage);
-  $("#reciver").html(messages[0].recivermessage);
-});
-
-$("#list2").on("click", function() {
-  $(".message-notification").hide();
-  $(".message").show();
-  $("#name").html(messages[1].sendername);
-  $("#phone-no").html(messages[1].phoneno);
-  $("#sender").html(messages[1].sendermessage);
-  $("#reciver").html(messages[1].recivermessage);
-
-});
-
-$("#list3").on("click", function() {
-  $(".message-notification").hide();
-  $(".message").show();
-  $("#name").html(messages[2].sendername);
-  $("#phone-no").html(messages[2].phoneno);
-  $("#sender").html(messages[2].sendermessage);
-  $("#reciver").html(messages[2].recivermessage);
-
-});
 
 
 
@@ -132,38 +105,66 @@ $("#reset-btn").on('click', () => {
 }
     });
 //click event
-    $( ".music-icon" ).click(function() {
-        $(".music").toggle();
-        $(".timmer,.message-notification,.message").hide();
-        $(".watch-screen" ).css({'background-color':'#222831'});
-    });
+$("#list1").on("click", function() {
+  $(".message-notification").hide();
+  $(".message").show();
+  $("#name").html(messages[0].sendername);
+  $("#phone-no").html(messages[0].phoneno);
+  $("#sender").html(messages[0].sendermessage);
+  $("#reciver").html(messages[0].recivermessage);
+});
 
-    $( ".clock-icon" ).click(function() {
-        $(".timer").toggle();
-        $(".music,.message-notification,.message").hide();
-        $(".watch-screen" ).css({'background-color':'#222831'});
+$("#list2").on("click", function() {
+  $(".message-notification").hide();
+  $(".message").show();
+  $("#name").html(messages[1].sendername);
+  $("#phone-no").html(messages[1].phoneno);
+  $("#sender").html(messages[1].sendermessage);
+  $("#reciver").html(messages[1].recivermessage);
 
-    });
-    $( ".watch-screenlock" ).click(function() {
+});
+
+$("#list3").on("click", function() {
+  $(".message-notification").hide();
+  $(".message").show();
+  $("#name").html(messages[2].sendername);
+  $("#phone-no").html(messages[2].phoneno);
+  $("#sender").html(messages[2].sendermessage);
+  $("#reciver").html(messages[2].recivermessage);
+
+});
+
+  $( ".music-icon" ).click(function() {
+      $(".music").toggle();
+      $(".timmer,.message-notification,.message").hide();
+      $(".watch-screen" ).css({'background-color':'#222831'});
+  });
+
+  $( ".clock-icon" ).click(function() {
+      $(".timer").toggle();
+      $(".music,.message-notification,.message").hide();
+      $(".watch-screen" ).css({'background-color':'#222831'});
+
+  });
+  $( ".watch-screenlock" ).click(function() {
       $(".watch-screenlock").fadeOut();
-    });
+  });
 
-    $( ".comments-icon" ).click(function() {
+  $( ".comments-icon" ).click(function() {
       $(".music,.timer,.message").hide();
       $(".message-notification").slideDown();
-        $(".watch-screen" ).css({'background-color':'#222831'});
+      $(".watch-screen" ).css({'background-color':'#222831'});
 
-    });
-    $( ".message-notification" ).dblclick(function() {
+  });
+  $( ".message-notification" ).dblclick(function() {
       $(".music,.message,.timer").hide();
       $(".message-notification").slideUp();
-        $(".watch-screen" ).css({'background-color':'#222831'});
+      $(".watch-screen" ).css({'background-color':'#222831'});
 
-    });
-    $( ".message" ).dblclick(function() {
+  });
+  $( ".message" ).dblclick(function() {
       $(".music,.message-notification,.timer").hide();
       $(".message").slideUp();
-
 
     });
 })
