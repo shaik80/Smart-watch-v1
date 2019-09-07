@@ -56,40 +56,44 @@ $(function(){
     $("#list1").html(messages[0].shotmessage);
     $("#list2").html(messages[1].shotmessage);
     $("#list3").html(messages[2].shotmessage);
+    let info = messages
+    .filter(v => v.shotmessage === ($(".notification-message").html()))
+    .map( v =>{
+      $("#name").html(v.sendername),
+      $("#phone-no").html(v.phoneno),
+      $("#sender").html(v.sendermessage),
+      $("#reciver").html(v.recivermessage)
+      });
 
 
-$(".notification-message").on("click", function() {
+$("#list1").on("click", function() {
   $(".message-notification").hide();
   $(".message").show();
-  let info = messages.filter(v => v.shotmessage.includes($(".notification-message").html()))
-                      .map( v =>{
-                      $(".message #name").html(v.sendername),
-                      $(".message #phone-no").html(v.phoneno),
-                      $(".message #sender").html(v.sendermessage),
-                      $(".message #reciver").html(v.recivermessage)
-                     });
-                     console.log($(".notification-message").html())
+  $("#name").html(messages[0].sendername);
+  $("#phone-no").html(messages[0].phoneno);
+  $("#sender").html(messages[0].sendermessage);
+  $("#reciver").html(messages[0].recivermessage);
 });
 
-// $("#list2").on("click", function() {
-//   $(".message-notification").hide();
-//   $(".message").show();
-//   $("#name").html(messages[1].sendername);
-//   $("#phone-no").html(messages[1].phoneno);
-//   $("#sender").html(messages[1].sendermessage);
-//   $("#reciver").html(messages[1].recivermessage);
+$("#list2").on("click", function() {
+  $(".message-notification").hide();
+  $(".message").show();
+  $("#name").html(messages[1].sendername);
+  $("#phone-no").html(messages[1].phoneno);
+  $("#sender").html(messages[1].sendermessage);
+  $("#reciver").html(messages[1].recivermessage);
 
-// });
+});
 
-// $("#list3").on("click", function() {
-//   $(".message-notification").hide();
-//   $(".message").show();
-//   $("#name").html(messages[2].sendername);
-//   $("#phone-no").html(messages[2].phoneno);
-//   $("#sender").html(messages[2].sendermessage);
-//   $("#reciver").html(messages[2].recivermessage);
+$("#list3").on("click", function() {
+  $(".message-notification").hide();
+  $(".message").show();
+  $("#name").html(messages[2].sendername);
+  $("#phone-no").html(messages[2].phoneno);
+  $("#sender").html(messages[2].sendermessage);
+  $("#reciver").html(messages[2].recivermessage);
 
-// });
+});
 
 
 
