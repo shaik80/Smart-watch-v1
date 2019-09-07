@@ -61,7 +61,7 @@ $(function(){
 $(".notification-message").on("click", function() {
   $(".message-notification").hide();
   $(".message").show();
-  let info = messages.filter(v => v.shotmessage == include($(".notification-message").html()))
+  let info = messages.filter(v => v.shotmessage.includes($(".notification-message").html()))
                       .map( v =>{
                       $(".message #name").html(v.sendername),
                       $(".message #phone-no").html(v.phoneno),
