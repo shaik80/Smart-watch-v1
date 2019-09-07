@@ -136,7 +136,7 @@ $("#list3").on("click", function() {
 
   $( ".music-icon" ).click(function() {
       $(".music").toggle();
-      $(".timmer,.message-notification,.message").hide();
+      $(".timer,.message-notification,.message").hide();
       $(".watch-screen" ).css({'background-color':'#222831'});
   });
 
