@@ -152,7 +152,6 @@ $("#reset-btn").on('click', () => {
         $(".watch-screen" ).css({'background-color':'#222831'});
 
     });
-
     $( ".message-notification" ).dblclick(function() {
       $(".music,.message,.timer").hide();
       $(".message-notification").slideUp();
@@ -162,8 +161,7 @@ $("#reset-btn").on('click', () => {
     $( ".message" ).dblclick(function() {
       $(".music,.message-notification,.timer").hide();
       $(".message").slideUp();
-        $(".watch-screen" ).css({'background-color':'#222831'});
+
 
     });
-
 })
