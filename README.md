@@ -1,2 +1,2 @@
-# Smart-watch-v1
+# Smart watch
  
