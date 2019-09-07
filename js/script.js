@@ -58,34 +58,38 @@ $(function(){
     $("#list3").html(messages[2].shotmessage);
 
 
-$("#list1").on("click", function() {
+$(".notification-message").on("click", function() {
   $(".message-notification").hide();
   $(".message").show();
-  $("#name").html(messages[0].sendername);
-  $("#phone-no").html(messages[0].phoneno);
-  $("#sender").html(messages[0].sendermessage);
-  $("#reciver").html(messages[0].recivermessage);
+  let info = messages.filter(v => v.shotmessage == include($(".notification-message").html()))
+                      .map( v =>{
+                      $(".message #name").html(v.sendername),
+                      $(".message #phone-no").html(v.phoneno),
+                      $(".message #sender").html(v.sendermessage),
+                      $(".message #reciver").html(v.recivermessage)
+                     });
+                     console.log($(".notification-message").html())
 });
 
-$("#list2").on("click", function() {
-  $(".message-notification").hide();
-  $(".message").show();
-  $("#name").html(messages[1].sendername);
-  $("#phone-no").html(messages[1].phoneno);
-  $("#sender").html(messages[1].sendermessage);
-  $("#reciver").html(messages[1].recivermessage);
+// $("#list2").on("click", function() {
+//   $(".message-notification").hide();
+//   $(".message").show();
+//   $("#name").html(messages[1].sendername);
+//   $("#phone-no").html(messages[1].phoneno);
+//   $("#sender").html(messages[1].sendermessage);
+//   $("#reciver").html(messages[1].recivermessage);
 
-});
+// });
 
-$("#list3").on("click", function() {
-  $(".message-notification").hide();
-  $(".message").show();
-  $("#name").html(messages[2].sendername);
-  $("#phone-no").html(messages[2].phoneno);
-  $("#sender").html(messages[2].sendermessage);
-  $("#reciver").html(messages[2].recivermessage);
+// $("#list3").on("click", function() {
+//   $(".message-notification").hide();
+//   $(".message").show();
+//   $("#name").html(messages[2].sendername);
+//   $("#phone-no").html(messages[2].phoneno);
+//   $("#sender").html(messages[2].sendermessage);
+//   $("#reciver").html(messages[2].recivermessage);
 
-});
+// });
 
 
 
