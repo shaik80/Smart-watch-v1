@@ -99,7 +99,7 @@ $("#list3").on("click", function() {
 
 
 
-
+//timer
 function startTimer() {
   ++totalSeconds;
   hour = Math.floor(totalSeconds /3600);
@@ -131,7 +131,7 @@ $("#reset-btn").on('click', () => {
     clearInterval(intervalId);
 }
     });
-
+//click event
     $( ".music-icon" ).click(function() {
         $(".music").toggle();
         $(".timmer,.message-notification,.message").hide();
