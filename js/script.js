@@ -1,124 +1,161 @@
 $(function(){
-    $(".timer").toggle();
-    $(".message").toggle();
+  $(".timer").toggle();
+  $(".message").toggle();
+  $(".message-notification").toggle();
+  $(".music").toggle();
+  let messages = [
+    {
+      sendermessage:"hi bro",
+      recivermessage:"hi bro",
+      shotmessage:"hello bro..",
+      sendername:"Shaik Mudassir",
+      phoneno:"8050681782"
+    },
+    {
+      sendermessage:"how r u",
+      recivermessage:"i'm f9",
+      shotmessage:"how r ...",
+      sendername:"Md Mudassir",
+      phoneno:"9902932793"
+    },
+    {
+      sendermessage:"wr r u",
+      recivermessage:"i'm at home",
+      shotmessage:"wr r u....",
+      sendername:"sup",
+      phoneno:"0987654321"
+    }
+      ];
+      let hour = 0;
+      let minute = 0;
+      let seconds = 0;
+      let totalSeconds = 0;
+      let intervalId = 0;
+      
+  setInterval(show_time, 1000);
 
-    $(".music").toggle();
-    // $( ".message-notification" ).hide();
-    
+  //message 
+  function show_time(){
+    let now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+    let dayword = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    let session = "AM";
+    if(h == 0){
+      h = 12;
+    }
+    if(h > 12){
+      h = h - 12;
+      session = "PM";
+    }
+    $("#time").html(h +":"+m);
+    $("#day").text(dayword[now.getDay()]);
+  }  
+
+    $("#list1").html(messages[0].shotmessage);
+    $("#list2").html(messages[1].shotmessage);
+    $("#list3").html(messages[2].shotmessage);
+
+
+$("#list1").on("click", function() {
+  $(".message-notification").hide();
+  $(".message").show();
+  $("#name").html(messages[0].sendername);
+  $("#phone-no").html(messages[0].phoneno);
+  $("#sender").html(messages[0].sendermessage);
+  $("#reciver").html(messages[0].recivermessage);
+});
+
+$("#list2").on("click", function() {
+  $(".message-notification").hide();
+  $(".message").show();
+  $("#name").html(messages[1].sendername);
+  $("#phone-no").html(messages[1].phoneno);
+  $("#sender").html(messages[1].sendermessage);
+  $("#reciver").html(messages[1].recivermessage);
+
+});
+
+$("#list3").on("click", function() {
+  $(".message-notification").hide();
+  $(".message").show();
+  $("#name").html(messages[2].sendername);
+  $("#phone-no").html(messages[2].phoneno);
+  $("#sender").html(messages[2].sendermessage);
+  $("#reciver").html(messages[2].recivermessage);
+
+});
+
+
+
+
+
+
+function startTimer() {
+  ++totalSeconds;
+  hour = Math.floor(totalSeconds /3600);
+  minute = Math.floor((totalSeconds - hour*3600)/60);
+  seconds = totalSeconds - (hour*3600 + minute*60);
+  $("#hour").html(hour);
+  $("#minute").html(minute);
+  $("#seconds").html(seconds);
+}
+$("#start-btn").on('click', () => {
+  intervalId = setInterval(startTimer, 1000);
+  $("#start-btn").hide();
+});
+$("#stop-btn").on('click', () => {
+  $("#start-btn").show();
+    if(intervalId != 0){
+        clearInterval(intervalId);
+    }
+});
+$("#reset-btn").on('click', () => {
+  $("#start-btn").show();
+   totalSeconds = 0;
+   $("#hour").html("0");
+   $("#minute").html("0");
+   $("#seconds").html("0");
+   if(intervalId != 0){
+    clearInterval(intervalId);
+}
+    });
+
     $( ".music-icon" ).click(function() {
         $(".music").toggle();
+        $(".timmer,.message-notification,.message").hide();
         $(".watch-screen" ).css({'background-color':'#222831'});
-
     });
+
     $( ".clock-icon" ).click(function() {
         $(".timer").toggle();
+        $(".music,.message-notification,.message").hide();
         $(".watch-screen" ).css({'background-color':'#222831'});
 
     });
     $( ".watch-screenlock" ).click(function() {
       $(".watch-screenlock").fadeOut();
     });
+
     $( ".comments-icon" ).click(function() {
-        $(".message").toggle();
+      $(".music,.timer,.message").hide();
+      $(".message-notification").slideDown();
         $(".watch-screen" ).css({'background-color':'#222831'});
 
     });
 
-    // $(".timer-countdown-value").keypress(function(){
-    //     $this = $(this);
+    $( ".message-notification" ).dblclick(function() {
+      $(".music,.message,.timer").hide();
+      $(".message-notification").slideUp();
+        $(".watch-screen" ).css({'background-color':'#222831'});
 
-    //     if($this.val().length == 8){
-    //         return false;
-
-    //     }
-    //     else if($this.val().length == 2 || $this.val().length == 5){
-    //         $this.val($this.val() + ":");
-    //         if($this.val().length == 0 || $this.val().length == 5){
-    //         }
-            
-    //     }
-    //     $(".timer-countdown-value").keyup(function(){
-    //         $("#timer-countdown").html($this.val());
-    //         if($("#timer-countdown").html()== ''){
-    //             $("#timer-countdown").html("00:00:00");
-    //         }
-    //     });
-        
-    //     // Allow only backspace and delete
-    //     // Ensure that it is a number and stop the keypress
-    //         if (event.keyCode == 58 || 
-    //             event.keyCode == 8 ||     //             event.keyCode == 127 || 
-    //             event.keyCode < 48 || 
-    //             event.keyCode > 57 || 
-    //             event.keyCode > 57) {
-    //             event.preventDefault();
-    //         }
-            
-    //  });
-
-
-
-
-
-
-
-
-    //  $("#timer-start").click(function(){
-    //     let countdown = $("#timer-countdown").html().split(":")
-    //                     .map(Number);
-        
-    //     if(countdown[2] == 0){
-    //         if(countdown[1] == 0){
-    //             if(countdown[0] == 0){
-    //             }
-    //             else{
-
-    //                 countdown[1] = countdown[1]-1;
-    //                 $("#timer-countdown").html(countdown[0]+':'+countdown[1]+':'+countdown[2]);
-    //                 countdown[2] = 60;
-    //             }
-    
-
-    //         }
-    //         else{
-    //             countdown[1] = countdown[1]-1;                
-    //         }
-    //     }
-    //     else{
-    //         countdown[2] = countdown[2]-1,100;
-    //         $("#timer-countdown").html(countdown[0]+':'+countdown[1]+':'+countdown[2]);
-    //     }
-    //     // setInterval( countdown - 1, 100);
-    //     console.log(countdown); 
-    //  });
-    let hour = 0;
-    let minute = 0;
-    let seconds = 0;
-    let totalSeconds = 0;
-    let intervalId = 0;
-    function startTimer() {
-      ++totalSeconds;
-      hour = Math.floor(totalSeconds /3600);
-      minute = Math.floor((totalSeconds - hour*3600)/60);
-      seconds = totalSeconds - (hour*3600 + minute*60);
-      $("#hour").html(hour);
-      $("#minute").html(minute);
-      $("#seconds").html(seconds);
-    }
-    $("#start-btn").on('click', () => {
-      intervalId = setInterval(startTimer, 1000);
     });
-    $("#stop-btn").on('click', () => {
-        if(intervalId != 0){
-            clearInterval(intervalId);
-        }
-    });
-    $("#reset-btn").on('click', () => {
-       totalSeconds = 0;
-       $("#hour").html("0");
-       $("#minute").html("0");
-       $("#seconds").html("0");
-        });
+    $( ".message" ).dblclick(function() {
+      $(".music,.message-notification,.timer").hide();
+      $(".message").slideUp();
+        $(".watch-screen" ).css({'background-color':'#222831'});
 
+    });
 
 })
