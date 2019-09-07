@@ -5,6 +5,6 @@ Hello,Alien
 
 1. CSS
 2. JS
-3. Use [Jquery](https://Jquery.com "Jquery")
+3. [Jquery](https://Jquery.com "Jquery")
 4. HTML
-5. Use [Bootsrap's](https://getbootstrap.com/docs/4.3/getting-started/introduction/ "Bootsrap's!")
+5. [Bootsrap's](https://getbootstrap.com/docs/4.3/getting-started/introduction/ "Bootsrap's!")
