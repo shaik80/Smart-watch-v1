@@ -117,6 +117,12 @@ $("#stop-btn").on('click', () => {
   $("#start-btn").show();
     if(intervalId != 0){
         clearInterval(intervalId);
+        if($(".lap").text() == 0 ){
+          $(".lap").text($("#timer-countdown").text());
+        } 
+        else
+        $(".lap").text($("#timer-countdown").text() - $(".lap").text());
+      
     }
 });
 $("#reset-btn").on('click', () => {
