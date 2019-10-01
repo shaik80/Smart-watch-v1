@@ -6,7 +6,7 @@
     Author: Shaik Mudassir
     Github: https://github.com/shaik80 */
 
-*{
+.main{
     overflow-y: scroll;
 }
 
@@ -34,7 +34,7 @@
 }
 .top-margin{
     margin-top: 6em;
-    margin-left: 1.5em;
+
 }
 /* main-container */
 
