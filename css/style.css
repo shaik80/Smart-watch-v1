@@ -100,20 +100,6 @@
     margin-top: 0.45em;
     margin-left: 0.5em;
 }
-.shape-left{
-    position: absolute;
-    width: 70px;
-    height: 76px;
-    border-radius: 0px 50px 50px 0px;
-    background: var(--color-white);
- 
-}
-.shape-right{
-    margin-left: 269px;
-    border-radius: 50px 0px 0px 50px;
-    position: absolute;
-    width: 70px;
-}
 .display-border{
     position: absolute;
     width: 237px;
