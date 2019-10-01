@@ -6,7 +6,9 @@
     Author: Shaik Mudassir
     Github: https://github.com/shaik80 */
 
-
+*{
+    overflow-y: scroll;
+}
 
 :root{
     --color-base-1:#C4C4C4;
@@ -16,11 +18,12 @@
     --color-secondary:#a287f4;
     --color-white:#fafafa;
 }
-
-/* description css */
-.main .description{
+.background-design{
     background-color:var(--color-blue);
     height: 100vh;
+}
+/* description css */
+.main .description{
     padding: 5em;
 }
 .paragraph{
@@ -29,7 +32,10 @@
 .task-heading{
     font-family: sans-serif;
 }
-
+.top-margin{
+    margin-top: 6em;
+    margin-left: 1.5em;
+}
 /* main-container */
 
 .main-container{
@@ -131,7 +137,7 @@
     transition: 0.8s;
     width: 37px;
     height: 36px;
-    background-color: var(--color-secondary);   
+    background-color: var(--color-blue);   
     border-radius: 50%;
 
 }
@@ -156,7 +162,7 @@ iframe{
 }
 .header{
     margin-bottom: 5%;
-    width: 233px;
+    width: 236px;
     height: 61px;
     background: var(--color-white);
     border-radius: 36px;
