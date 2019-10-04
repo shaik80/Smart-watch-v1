@@ -131,13 +131,11 @@ $("#list3").on("click", function() {
   $( ".music-icon" ).click(function() {
       $(".music").toggle();
       $(".timer,.message-notification,.message").hide();
-      $(".watch-screen" ).css({'background-color':'#222831'});
   });
 
   $( ".clock-icon" ).click(function() {
       $(".timer").toggle();
       $(".music,.message-notification,.message").hide();
-      $(".watch-screen" ).css({'background-color':'#222831'});
 
   });
   $( ".watch-screenlock" ).click(function() {
@@ -147,18 +145,13 @@ $("#list3").on("click", function() {
   $( ".comments-icon" ).click(function() {
       $(".music,.timer,.message").hide();
       $(".message-notification").slideDown();
-      $(".watch-screen" ).css({'background-color':'#222831'});
-
   });
   $( ".message-notification" ).dblclick(function() {
       $(".music,.message,.timer").hide();
       $(".message-notification").slideUp();
-      $(".watch-screen" ).css({'background-color':'#222831'});
-
   });
   $( ".message" ).dblclick(function() {
       $(".music,.message-notification,.timer").hide();
       $(".message").slideUp();
-
     });
 })

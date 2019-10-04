@@ -13,10 +13,14 @@
 :root{
     --color-base-1:#C4C4C4;
     --color-base-2:#000000;
-    --color-blue:#1394f6;
+    --color-blue:#52b1f8;
     --color-primary:#12e6c8;
     --color-secondary:#a287f4;
     --color-white:#fafafa;
+}
+
+.homescreen{
+    background-image: url(../img/screen-shoot.jpg)
 }
 .background-design{
     background-color:var(--color-blue);
@@ -69,37 +73,42 @@
     margin-top: 1em;
     position: absolute;
     width: 237px;
+    background-image: url(../img/me1.jpg);
 }
 .watch-screenlock{
-    background-color:var(--color-base-2);
+    background-image: url(../img/lock-background.jpg);
+    background-attachment: fixed;
+    filter: brightness(.9);
+    /* background:var(--color-base-2); */
     border-radius: 36px;
     background-size: 100%;
     height: 267px;
     position: absolute;
-    width: 237px;    
+    width: 237px;
+    
 }
 .watch-screen-copy{
     position: absolute;
     margin-left: 0em;
     width: 237px;
     height: 267px;
-    background-color:var(--color-base-2);
+    background: rgba(0, 0, 0, 0.34);;
     background-size: 100%;
     border-radius: 36px;
 }
 .round-icon{
-    margin-left: 1em;
-    margin-bottom: 0.5em;
-    width: 32px;
+    margin-left: .5em;
+    margin-bottom: .2em;
+    width: 31px;
     height: 31px;
-    background: var(--color-base-2);
+    background: rgba(0, 0, 0, 0.50);;
     border-radius: 50%;
     display: inline-block;
 }
 .far,.fas{
-    margin-top: 0.35em;
+    margin-top: 0.4em;
     margin-left: 0.4em;
-    color: var(--color-base-1);
+    color: #ffffff;
     font-size:1em
 }
 .fa-clock{
@@ -118,15 +127,16 @@
 .time{
     position: absolute;
     color: #ffffff;
-    margin-left: 2em;
-    margin-top: 3em;
+    margin-left: 7.8em;
+    margin-top: 5em;
 }
 
-.time h1{
-    font-size: 4.7em;
+.time #time{
+    font-size: 2em;
+    margin-top: .2em;
 }
 .day{
-    margin-bottom: -16px;
+    margin-bottom: -11px;
     font-size: 1.5em;
     color: var(--color-primary);
 }
@@ -135,9 +145,7 @@
 }
 .round-icon:hover{
     transition: 0.8s;
-    width: 37px;
-    height: 36px;
-    background-color: var(--color-blue);   
+    background-color: rgba(19, 148, 246, .50);;   
     border-radius: 50%;
 
 }
