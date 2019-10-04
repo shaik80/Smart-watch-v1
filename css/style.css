@@ -19,9 +19,7 @@
     --color-white:#fafafa;
 }
 
-.homescreen{
-    background-image: url(../img/screen-shoot.jpg)
-}
+
 .background-design{
     background-color:var(--color-blue);
     height: 100vh;
@@ -76,12 +74,12 @@
     background-image: url(../img/me1.jpg);
 }
 .watch-screenlock{
-    background-image: url(../img/lock-background.jpg);
+    background-image: url(../img/4k-wallpaper.jpg);
     background-attachment: fixed;
     filter: brightness(.9);
     /* background:var(--color-base-2); */
     border-radius: 36px;
-    background-size: 100%;
+    background-size: 170%;
     height: 267px;
     position: absolute;
     width: 237px;
