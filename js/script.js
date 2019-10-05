@@ -78,26 +78,32 @@ function startTimer() {
 }
 $("#start-btn").on('click', () => {
   intervalId = setInterval(startTimer, 1000);
-  $("#start-btn").hide();
+  $("#start-btn").fadeOut().css('pointer-events','none')
+
 });
 $("#stop-btn").on('click', () => {
-  $("#start-btn").show();
+  $("#start-btn").fadeIn().css('pointer-events','auto')
     if(intervalId != 0){
-        clearInterval(intervalId);
-      
+        clearInterval(intervalId);      
     }
+    $('#laps').html( "Lap: " + hour + ":"+  minute +":"+  seconds );
 });
 
+
+
 $("#reset-btn").on('click', () => {
-  $("#start-btn").show();
+  $("#start-btn").fadeIn().css('pointer-events','auto')
    totalSeconds = 0;
    $("#hour").html("0");
    $("#minute").html("0");
    $("#seconds").html("0");
+   $('#laps').html( "Lap: 0:0:0");
    if(intervalId != 0){
     clearInterval(intervalId);
-}
+    }
     });
+
+
 //click event
 $("#list1").on("click", function() {
   $(".message-notification").hide();

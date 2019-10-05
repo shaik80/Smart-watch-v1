@@ -133,6 +133,13 @@
     font-size: 2em;
     margin-top: .2em;
 }
+#laps{
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: .5em;
+
+}
+
 .day{
     margin-bottom: -11px;
     font-size: 1.5em;
@@ -159,7 +166,7 @@ iframe{
     border-color: var(--color-base-2)
 }
 .timer-countdown{
-    margin-bottom: 30%;
+    margin-bottom: 10%;
     font-size: 3.5em;
 }
 #timer .far,
