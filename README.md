@@ -16,4 +16,6 @@ like:- music,timer,message
 
 #### picture
 
+## old design
+
 ![screen shoot](https://github.com/shaik80/Smart-watch-v1/blob/master/img/screen-shoot.jpg)
